@@ -9,16 +9,7 @@ class PetsController < ApplicationController
     @owner = Owner.all
     erb :'/pets/new'
   end
-#   it " creates a new pet and a new owner" do
-#   visit '/pets/new'
-#   fill_in "pet_name", :with => "Pippa"
-#   fill_in "owner_name", :with => "Mary Nelson"
-#   click_button "Create Pet"
-#   @owner = Owner.last
-#   @pet = Pet.last
-#   expect(@pet.name).to eq("Pippa")
-#   expect(@pet.owner.name).to eq("Mary Nelson")
-# end
+
   post '/pets' do
     @pet = Pet.create(params[:pet])
   # binding.pry
