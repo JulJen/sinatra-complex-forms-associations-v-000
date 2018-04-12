@@ -27,12 +27,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     erb :'/pets/edit'
   end
- #  it "edit's the pet's name" do
- #   visit "/pets/#{@pet.id}/edit"
- #   fill_in "pet_name", :with => "Chewie Darling"
- #   click_button "Update Pet"
- #   expect(Pet.last.name).to eq("Chewie Darling")
- # end
+
   get '/pets/:id' do
     @pet = Pet.find(params[:id])
     erb :'/pets/show'
